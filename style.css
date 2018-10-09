@@ -1,3 +1,4 @@
+/*cronometer*/
 .box{
   background-color: #6b2cbf;
   height:100px;
@@ -20,3 +21,30 @@ p{
  p.time{
    margin-right:7px;
  }
+/*board*/
+.board{
+  position:absolute;
+  left:30%;
+  top:10%;
+}
+.cellB, .cellW {
+  width:50px;
+  height:50px;
+  border: solid 1px #00868b;
+  display:inline-block;
+  padding: 0px;
+  position:relative; /*se va a posicionar a traves del elemento padre*/
+  margin: -3px; /*junta las celdas(sin espacios)*/
+}
+.cellB{
+background-color:#987b84;
+}
+.cellW{
+  background-color:#ffffff;
+}
+.cellB:hover{
+  box-shadow: inset 0 0 30px  #00868b;
+}
+.cellW:hover{
+  box-shadow: inset 0 0 20px  #00868b;
+}
