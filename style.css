@@ -1,16 +1,20 @@
 .box{
   background-color: #6b2cbf;
   height:100px;
-  width:200px;
+  width:23s0px;
   padding: 10px 30px;
   box-sizing: border-box;
-  position:relative;
+  position:absolute;
   left:10%;
+  top:10%;
+  box-shadow: -7px 12px 9px #6666ff;
 }
 p{
   color:white;
   display: inline-block;
-  font-size:25px;
+  font-size:27px;
+  font-family: Sans-serif;
+  font-weight:bold;
 }
  p.time{
    margin-right:7px;
