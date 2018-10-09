@@ -1,0 +1,17 @@
+.box{
+  background-color: #6b2cbf;
+  height:100px;
+  width:200px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  position:relative;
+  left:10%;
+}
+p{
+  color:white;
+  display: inline-block;
+  font-size:25px;
+}
+ p.time{
+   margin-right:7px;
+ }
