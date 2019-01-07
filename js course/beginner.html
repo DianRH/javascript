@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script>
+    //VIDEO 7 tipos de datos
+    var a = 5; //a =5; //asignar un valor de tipo number
+    console.log(a); //función que va a imprimir lo que hay en parentesis
+
+    a = 'abc'; //asignar un valor de un tipo distinto a la misma variable que es string
+    console.log(typeof a); //typeof imprime el tipo de dato: string,boolean,number etc...
+
+    a = true; //valor booleano true o false
+    console.log(typeof a); //imprimir el tido de dato boolea
+    /*----------------------------------------------------------------------------------------------------------------*/
+    //VIDEO 9 conversión entre tipo de datos
+    var a = 5;
+    var b = a + '5'; //conversión implicita, el operador + (mas) su función aquí es para concatenar el string
+    console.log(b); //su resultado será 55
+
+    b = '6' + a; //conversión implicita
+    console.log(b);
+
+    var c = a + Number('5'); //conversión explicita, se sumaran y el resultado será 10
+    console.log(c);
+
+    console.log(6 + 6); //hace la suma no hace ninguna conversión
+    console.log(String(6) + String(6)); //concatena, conversion explicita
+
+    //---Ejemplo---
+    var price = 12.50;
+    console.log('$' + price); //mostrar el signo de precio con el precio (concatenar)
+    //el operador mas permite concatenar cadenas
+    //pernite suma numeros
+    //basta que uno de los valores sea una cadena, para que el otro se convierta también a cadena
+    /*--------------------------------------------------------------------------------------------------------------*/
+    //Video 10 constantes
+    //area de un circulo
+    var radio = 12.30; //variable a contiene el valor de 12.30
+    var PI = 3.14159;
+    var area = PI * radio * radio;
+    console.log(area);
+    //una variable debe contener un nombre claro
+    //una variable con el nombre en mayusculas se determina como una CONSTANTE pero puede cambiar el valor de la constante
+    //en la version ES6 se declara una constante con Const
+    /*--------------------------------------------------------------------------------------------------------------*/
+    //VIDEO 11 condicionales
+    //area de un circulo
+    var radio = 7;
+    //var PI = 3.14159;
+    var area = Math.PI * radio * radio;
+    /*Math es un objeto que contiene constantes y funciones para hacer operaciones matematicas
+                                            sera mas exacto el resultado y no se tendra que declarar la constante*/
+    console.log(area); //console.log(); imprime un mensaje
+
+    var randomNumber = Math.random(); //Math.random() muestra un numero aleatorio entre 0 y 1 pero nunca tocará al 1
+    if (randomNumber <= 0.5) //si se quieren ejecutar multiples sentencias se usan llaves, es recomendable usar siempre llaves
+      console.log('SI');
+    else
+      console.log('NO'); //el else es opcional
+    /*--------------------------------------------------------------------------------------------------------------*/
+    //VIDEO 12 Bucles
+    var randomNumber;
+    //BUCLES FOR Y WHILE permiten la ejecucion de un bloque de sentencias de forma repetida
+    //FOR
+    for (var i = 0; i < 10; i++) //++i,1+=1,i=1+1 distintas formas de incrementar 1
+    {
+      var randomNumber = Math.random(); //Math.random() muestra un numero aleatorio entre 0 y 1 pero nunca tocará al 1
+      if (randomNumber <= 0.5) //si se quieren ejecutar multiples sentencias se usan llaves, es recomendable usar siempre llaves
+        console.log(i + ' SI');
+      else
+        console.log(i + ' NO'); //el else es opcional
+    }
+
+    //WHILE
+    var randomNumber;
+    var i = 0;
+    while (i < 10) {
+      var randomNumber = Math.random();
+      if (randomNumber <= 0.5) {
+        console.log(i + ' SI');
+      } else {
+        console.log(i + ' NO');
+      }
+      i = i + 1; //contador
+    }
+
+    //si la condicion se cumple se repetira el bucle
+    //se quiere imprimir 1, 1+1 2, 2+2 4, 4+4 8 hasta 100
+    //WHILE
+    var x = 1;
+    while (x < 100) {
+      console.log(x);
+      x = x + x; //x =2 acumulador
+    }
+
+    //fOR
+    for (var x = 1; x < 100; x = x + x) {
+      console.log(x);
+    }
+  </script>
+
+</body>
+
+</html>
