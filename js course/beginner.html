@@ -104,7 +104,40 @@
     for (var x = 1; x < 100; x = x + x) {
       console.log(x);
     }
+    /*--------------------------------------------------------------------------------------------------------------*/
+    //VIDEO 13 funciones
+
+    //for invoca a una funcion para que ejecute sentencias y no devuelve valor alguno
+    for (var i = 0; i < 10; i++) {
+      printDecision(); //se llama a la función y no va a devolver ningún valor
+    }
+
+    function printDecision() //nombre de la función
+    {
+      var randomNumber = Math.random();
+      if (randomNumber <= 0.5)
+        console.log(' SI');
+      else
+        console.log(' NO');
+    }
+
+    /*------------------*/
+    //for usa una función para obtener un valor en particular
+    for (var i = 0; i < 10; i++) {
+      var decision = getDecision(); //se llama a la función
+      console.log(i + ' ' + decision); //se llama a la funcion con la variable y se imprime por consola y va a devolver valores
+    }
+
+    function getDecision() //nombre de la función
+    {
+      var randomNumber = Math.random();
+      if (randomNumber <= 0.5)
+        return 'SI'; //devuelve el valor, no lo imprime
+      else
+        return ' NO'; //devuelve el valor, no lo imprime
+    }
   </script>
+
 
 </body>
 
