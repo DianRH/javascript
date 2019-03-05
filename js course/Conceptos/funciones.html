@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Funciones (Functions)</title>
+</head>
+<body>
+  <script>
+    /* declaracion de una función
+    function function_name(){
+      //body..
+    } */
+    /* Hoisting(elevando) se puede mandar a llamar antes porque la Funcion
+    ya se encuentra disponible desde antes ya que la existencia de la Funcion
+    se eleva un nivel mas alto y permite que la funcion sum se pueda usar previamente
+    y aplica para este tipo de declaracion de funciones con nombre*/
+    console.log(sum(5,7)); //esto es hoisting
+    function sum(a,b){
+      return a + b;
+    }
+
+    //function expression
+    //no se especifica el nombre de la funcion y se almacena sobre una variable
+   //el Hoisting NO aplica para este tipo de declaracion de funcion por lo tanto se obtendra que no se ha definido la funcion
+    var mult = function (a,b){
+      return a * b;
+    }
+    console.log(mult(5, 7));
+
+    //
+    var player = {
+      name: 'Juan',
+      sayHi: function (){
+        console.log(`Hola, mi nombre es ${this.name}.`);
+      }
+    };
+    player.sayHi();
+  </script>
+
+</body>
+</html>
