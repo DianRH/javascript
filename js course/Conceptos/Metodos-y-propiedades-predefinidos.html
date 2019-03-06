@@ -48,8 +48,20 @@
 //------------------------------------------------------------------------------------------------
      var oraciones =x.split(('. ')); /*va a partir la oración y en cada punto y espacio se convertira
                                     una nueva posición de un arreglo*/
-
+      //forEach para iterar
       oraciones.forEach( e =>console.log(`${e}.`)); //agrega el punto al final de cada arreglo
+    
+    // for(var punto = 0; punto < oraciones.length ; punto ++ ){
+    //       oraciones[punto] = `${oraciones[punto]}.`
+    // }
+    console.log("oraciones: ", oraciones);
+
+
+    //ESTUDIAR .MAP ; SE ITERA A CADA ITEM y devuelve un nuevo array, se crea un nuevo array NO se modifica
+    const nuevoArray = oraciones.map( (oracion, index, array) => {
+      return `${oracion}.`
+    })
+    console.log(nuevoArray)
 
   </script>
 
