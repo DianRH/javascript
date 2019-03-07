@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diferencias entre var, const, let</title>
+</head>
+<body>
+
+  <script>
+    //const : referencias constantes,No se refiere a inmutable
+    /*cuando la variable solo va a tener un unico valor en todo programa se usa
+     mayusculas para que sea constante su valor o sea que no va a cambiar*/
+     /*si su valor cambia se debe escribir con minusculas*/
+    const x ={ //buena práctica: 1 variable debe usarse con un unico propósito
+      a: 5,
+      b:10
+    };
+    x.a = 15; //podemos cambiar el atributo o propiedad de un objeto
+    //x=6; // no es posible
+    //x ={}; //no es posible
+
+    //EJEMPLO DE UN JUEGO
+    // let vida;
+    // const VIDA_INICIAL =; //nunca se va a modificar su valor
+    // //empiece una nueva partida
+    // vida = VIDA_INICIAL;
+
+    //let: scope funciona a nivel de bloque
+    //var: scope funciona a nivel de función si no hay ninguna funcion el scope funciona a nivel global
+    if (3 < 5){
+      let y=7;
+      //var y = 7;
+    }
+    console.log(y); //no se ha definido:let ya que solo funciona a nivel de bloque(dentro de las llaves)
+                    // 7 : var ya que como no esta en funcio actuara como una variable a nivel global
+
+    /*cuando se trata de javascript en el navegador existe una variable window que guarda
+     como propiedades a todas la variables globales podemos escribir window.y y su resultado sera 7
+     ya que esta declarado con var*/
+  </script>
+
+</body>
+</html>
