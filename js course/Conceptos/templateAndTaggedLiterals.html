@@ -16,6 +16,17 @@
                                   //para un salto de linea solo se da el salto en el template literal
     console.log(z)
 
+//TAGGED TEMPLATE LITERALS
+//son una forma de invocar funciones y hacer que reciban en su lista de parametros información de un template literal
+function saludar(parts, val1, val2){
+  console.log(parts, val1);
+  console.log(val1);
+  console.log(val2);
+}
+
+const nombre = 'Diana';
+saludar`Hola ${nombre}. Tu puntaje es ${5*2}`; //no va enviar un único argumento si no mas sin los parentesis
+
   </script>
 
 </body>

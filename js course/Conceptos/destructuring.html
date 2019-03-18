@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destructuring</title>
+</head>
+<body>
+
+  <script>
+    /*asignar valores a variables independientes a partir de los elementos de un arreglo o a partir
+    de las propiedades de un objeto, descomponer un arreglo en sus elementos o descomponer un objeto en
+    sus propiedades para que al desestructurar estas estructuras de datos podamos asignar valores a distintas
+    variables*/
+
+    //Asi se maneja tradicionalmente
+    // const p1 =[10,5,5];
+    //
+    // let x =p1[0];
+    // let y =p1[1];
+    // let z =p1[2];
+    // console.log(x);
+    // console.log(y);
+    // console.log(z);
+
+    //asignacion por destructuracion
+    // const p1 =[10,5,5];
+    // const [x,y,z] = p1; //variables que se estan declarando y a la vez se estan inicializando
+    // console.log(x);
+    // console.log(y);
+    // console.log(z);
+    //--------------------------------------------------------------------//
+      // const p2= [20, 30, 50, 60, 90, -56];
+      // let [x1,y1,z1, ...otras] =p2;
+      // console.log(`x: ${x1}, y: ${y1}, z: ${z1}`);
+      // console.log(otras);
+
+      //-------------------------------------------------------------------------//
+      /*se puede declarar primero y luego inicializar pero usando la variable let ya que
+        no const*/
+        //destructuring con arreglos
+    // let a,b,c,d;
+    // [a,b,c,d=100] =[7,8,10]; //d = 100 es un valor por defecto
+    // console.log(`a: ${a} - b: ${b} - c: ${c} - d: ${d}`);
+
+    //--------------------------------------------------------------------------------//
+    //destructuring con objetos
+    // let {a,b} = {a: 10, b:20}; //tambien se pueden usar para asignar valores a variables a partir de propiedades de objetos
+    // console.log(a+b);
+
+    const punto ={x: 10, y:100};
+    function imprimirPunto({x: g, y: h} ){
+    console.log(`x: ${g}, y: ${h}`);
+  }
+  imprimirPunto(punto);
+  </script>
+
+</body>
+</html>
