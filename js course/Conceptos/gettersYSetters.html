@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getters y Setters</title>
+</head>
+<body>
+  <script>
+
+    // class Rectangulo {
+    //   constructor(ancho, alto) {
+    //     this.ancho = ancho; //asignar los valores como propiedades de la clase
+    //     this.alto = alto;
+    //     this.area = ancho * alto;
+    //   }
+    //   getArea() {
+    //     return this.area;
+    //   }
+    // }
+    //   const r1 = new Rectangulo(5, 10); //instancia de una clase
+    //   //const area = r1.getArea();
+    //   console.log(`El área del rectángulo es: ${r1.area}`);
+      /*las propiedades de la clase estan expuestas por lo tanto no es lo mas recomendable (getArea() )
+        se pueden acceder desde un objeto*/
+
+      //-----------------------------get y set ----------------------------------//
+      //getters son métodos especiales, no se invocan de la forma tradicional (area();)
+
+          class Rectangulo {
+            constructor(ancho, alto) {
+              this.ancho = ancho; //asignar los valores como propiedades de la clase
+              this.alto = alto;
+            }
+
+            get area() { //cuando se solicita un atributo que requiere un calculo especial sera el get
+              return this.ancho * this.alto ;
+            }
+            set
+          }
+            const r1 = new Rectangulo(5, 10); //instancia de una clase
+            r1.ancho
+            console.log(`El área del rectángulo r1 es: ${r1.area}`);
+
+
+  </script>
+
+</body>
+</html>

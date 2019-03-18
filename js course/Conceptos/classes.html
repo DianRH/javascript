@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Classes</title>
+</head>
+<body>
+
+  <script>
+  //una clase es la abstraccion de una serie de objetos que tienen caracteristicas en común
+  //ejem. clase perro; nombre edad y raza son atributos de la clase
+  /*herencia clase perro y gato puede heredar de la clase mascota
+    las clases hijas heredan atributos y comportamientos de su clase padre */
+  class Perro {
+      //atributos ó propiedades; y métodos (puede ser una función) tiene una clase
+
+      constructor (nombre, edad, raza) { //se va a encargar de inicializar los datos de los objetos o instancias de la clase
+        this.nombre = nombre;
+        this.edad = edad;
+        this.raza = raza;
+      }
+
+      ladrar () { //método no es necesario la palabra reservada function
+        console.log(`El perro ${this.nombre} ha ladrado.`);
+      }
+  }
+  //se necesita hacer la instancia de la clase para que se muestre
+  let perro1 = new Perro('Tracy', 1, 'Husky');
+  perro1.ladrar();
+
+  }
+  </script>
+</body>
+</html>
