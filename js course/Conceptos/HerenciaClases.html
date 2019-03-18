@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Herencia</title>
+</head>
+<body>
+  <script>
+  //Clase padre
+    class Mascota {
+      constructor (nombre, edad, raza,tipo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.raza = raza;
+        this.tipo = tipo; //perro o gato
+      }
+
+      verInfo() {
+        console.log(`Nombre: ${this.nombre}`);
+        console.log(`Edad: ${this.edad}`);
+        console.log(`Raza: ${this.raza}`);
+        console.log(`Tipo de mascota: ${this.tipo}`);
+      }
+    }
+   //Herencia (clase hija)
+    class Perro  extends Mascota { // la clase perro hereda de la clase mascota el contructor
+      constructor (nombre, edad, raza, volumenLadrido) {
+          super(nombre, edad, raza, 'Perro');/*se debe respetar el construtor de la clase padre, super referencia al constructor de la clase padre*/
+            this.volumenLadrido =volumenLadrido;//se pueden agregar mas parámetros a este constructor
+        }
+
+        console.log(`El perro ${this.nombre} ha ladrado con volumen ${this.volumenLadrido}.`);
+        ladrar () {
+        }
+    }
+    //herencia (clase hija)
+    class Gato extends Mascota { // la clase gato hereda de la clase mascota el constructor
+      constructor (nombre, edad, raza) {
+          super(nombre, edad, raza, 'Gato');/*se debe respetar el construtor de la clase padre, super referencia al constructor de la clase padre*/
+
+        }
+    }
+
+    let perro1 = new Perro('Tracy', 1, 'Husky','muy fuerte');
+    perro1.ladrar();
+    perro1.verInfo();
+
+    let gato1 = new Gato ('Apolo',3,'Desconocido');
+    gato1.verInfo();
+  </script>
+
+</body>
+</html>
