@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spread operator</title>
+</head>
+<body>
+
+  <script>
+    //el operador spread desintegra un arreglo para enviar cada elemento del arreglo como un argumento independiente
+    //enviar un conjunto de elementos de forma individual (desintegra el arreglo)
+    function sumar(texto, ...valores){
+      let resultado =0;
+      valores.forEach(
+        valor => resultado += valor
+      );
+      console.log(`${texto}: ${resultado}`);
+
+    }
+    //ES6
+     const numeros =[10,5,5];
+     sumar('la suma total es', ...numeros);
+
+      //spread otro ejemplo
+     const numeros = [10,5,5,10];
+     const deuda =100;
+     const argumentos =[...numeros, deuda];
+     console.log(argumentos);
+
+
+    //ES5
+    // const numeros =[10,5,5,10];
+    // numeros.unshift('La suma total es')//envia la cadena comp primer elemento
+    // sumar.apply(null, numeros);//apply recibe todos los argumentos, tambien texto
+  </script>
+
+</body>
+</html>

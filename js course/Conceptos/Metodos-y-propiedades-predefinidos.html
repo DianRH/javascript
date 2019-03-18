@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Métodos predefinidos (incorporados en el lenguaje)</title>
+</head>
+<body>
+
+  <script>
+    //métodos predefinidos, significa que no tenemos que implementarlos
+    //los métodos nos permiten realizar operaciones sobre los objetos
+    // cuando accedemos a una propiedad o un método la variable var se convierte en un objeto
+    // var x ='Aprendiendo Javascript';//objeto String ya que contiene propiedades y métodos
+    // console.log(x.length);//propiedad
+    //console.log(x.toUpperCase());//método
+    //console.log(x.toLowerCase());
+    //console.log(x);// el valor x no será afectado con los métodos
+
+    // el valor de x es afectado porque se realizo una asignación
+    //x = x.toUpperCase();
+    //console.log(x);
+    //-----------------------------------------------------------------------
+    // método para saber en que posicion inicia la palabra javascript
+    // var i = x.indexOf('Javascript');
+    // console.log(i);//12 ; Inicia la palabra desde la posición 12
+    //---------------------------------------------------------------------
+    //
+    var x ='Aprendiendo Javascript. Javascript es un leguaje muy poderoso.'//objeto String ya que contiene propiedades y métodos
+    //var i = x.indexOf('.');
+    //console.log(x.slice(i)); // a partir del punto estamos obteniendo la cadena (. Javascript es in leguaje muy poderoso)
+      var i =x.lastIndexOf('Javascript'); // mostrara solo la oración despues del punto
+      console.log(x.slice(i));
+
+      //console.log(x.replace('Javascript', 'js')); //reemplaza javascript pór js pero solo el primer termino
+      console.log(x.replace(/Javascript/g , 'js'));/*el uso de expresion regular hace referencia a un patron de busqueda
+                                             sobre una cadena que permite encontrar mas de una coincidencia*/
+//-------------------------------------------------------------------------------
+    // arreglo
+    var personas =[
+      'Juan',
+      'María',
+      'Edgar'
+    ];
+    console.log(personas.length);
+    // existen métodos que nos permiten convertir arreglos en cadenas y cadenas en Arreglos
+    //console.log(personas.join(', ')); //resultado : Juan, María, Edgar
+
+//------------------------------------------------------------------------------------------------
+     var oraciones =x.split(('. ')); /*va a partir la oración y en cada punto y espacio se convertira
+                                    una nueva posición de un arreglo*/
+      //forEach para iterar
+      oraciones.forEach( e =>console.log(`${e}.`)); //agrega el punto al final de cada arreglo
+    
+    // for(var punto = 0; punto < oraciones.length ; punto ++ ){
+    //       oraciones[punto] = `${oraciones[punto]}.`
+    // }
+    console.log("oraciones: ", oraciones);
+
+
+    //ESTUDIAR .MAP ; SE ITERA A CADA ITEM y devuelve un nuevo array, se crea un nuevo array NO se modifica
+    const nuevoArray = oraciones.map( (oracion, index, array) => {
+      return `${oracion}.`
+    })
+    console.log(nuevoArray)
+
+  </script>
+
+</body>
+</html>

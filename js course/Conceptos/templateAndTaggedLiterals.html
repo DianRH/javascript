@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template y tagged Literals</title>
+</head>
+<body>
+
+  <script>
+
+    const x = 'Diana'
+    const y = 5
+    /*al interior de un template literal podemos usar
+      expresiones, e imprimir valores o resultados de expresiones*/
+    const z = `Hola ${x} - ${y*2}` //interpolacion:cuando incluimos el valor de una expresion o variable
+                                  //para un salto de linea solo se da el salto en el template literal
+    console.log(z)
+
+//TAGGED TEMPLATE LITERALS
+//son una forma de invocar funciones y hacer que reciban en su lista de parametros información de un template literal
+function saludar(parts, val1, val2){
+  console.log(parts, val1);
+  console.log(val1);
+  console.log(val2);
+}
+
+const nombre = 'Diana';
+saludar`Hola ${nombre}. Tu puntaje es ${5*2}`; //no va enviar un único argumento si no mas sin los parentesis
+
+  </script>
+
+</body>
+</html>

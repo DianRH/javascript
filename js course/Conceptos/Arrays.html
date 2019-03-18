@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arreglos (Arrays)</title>
+</head>
+<body>
+
+  <script>
+    //el arreglo se define con corchetes y son objetos
+    //es usual que el arreglo contenga datos de un mismo tipo
+    //puede contener diferentes tipos de datos sin necesidad de una llave
+    //las llaves son los valores numericos 0,1,2...
+    var x = [
+        'Juan',  //string
+        true     //boolean
+        22,      //number
+    ];
+    console.log(`El arreglo tiene ${x.length} elementos`);
+    //           llave: valor
+    //resultado   0: "Juan"
+    //            1: 22
+    //            2: true
+    //            legth: 3
+    //para acceder a un atributo: x[0] //Juan
+
+    //la funcion push permite añadir un elemento mas al final del arreglo (posicion 3)
+    //se puede añadir un tipo de dato mas y también objetos
+    x.push('Carlos');
+    x.push({a: 5,b: 6 });
+    console.log(x);
+    console.log(`El arreglo ahora tiene ${x.length} elementos`);
+  </script>
+
+</body>
+</html>

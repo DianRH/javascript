@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rest Operator</title>
+</head>
+<body>
+  <script>
+
+  //OPERADOR REST ES6
+  //recibe multiples argumentos y los recibe en 1 arreglo
+    function sumar(texto, ...valores){ //rest  ... e identificador; permitira recibir una cantidad indefinida de parámetros
+                                //siempre se debe usar al final, no pueden haber mas parámetros delante de el
+    let resultado =0;
+     valores.forEach(
+      valor => resultado += valor
+    );
+    // console.log(resultado);
+        console.log(valores); //con este operador SI se pueden usar métodos para los arreglos porque pasa a ser un array
+        console.log(`${texto}: ${resultado}`);
+    }
+
+    sumar('La suma total es', 10,5,5);
+
+    //se pueden hacer muchas sumas gracias al operador rest
+    //sumar (4,6,10);
+  //  sumar(2,2,2);
+    //sumar(10,5);
+    //sumar(17);
+
+  //ES5
+    // function sumar (){
+    //   console.log(arguments); // de esta manera se accede a la lista de parámetros sin declarar, parámetros en la función
+    //     // arguments es un objeto,No un arreglo
+           //con este operador NO se pueden usar métodos para los arreglos ya que pasa a ser un objeto
+    // }
+
+//Solución con arguments para usar un método que es para arreglos y no para objetos
+    function sumar(){
+      //corchetes para crear un arreglo.acceder al método.se aplique sobre arguments,[y se pasa la lista de argumentos]
+      console.log([].slice.apply(arguments, [1]));
+      //se recurre a una función llamada apply que nos permite ejecutar un método sobre un objeto determinado
+    }
+  </script>
+
+</body>
+</html>
