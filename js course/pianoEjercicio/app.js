@@ -48,46 +48,16 @@ con la "etiqueta" que definimos */
 /*-------------------Código usando ES6--------------------------------*/
 
  //variable button nunca es modificada por lo tanto se declara const
-// const buttons = document.querySelectorAll('button');
-//
-// //arrow function
-// buttons.forEach(
-//   button => button.addEventListener('click',playSound);
-// );
-//
-// function playSound(event){
-//   const button = event.target;
-//   const note = button.dataset.note;
-//
-//   //uso de template strings/literals
-//   const audio = document.getElementById(`audio${note}`);
-//   audio.pause();
-//   audio.currentTime =0;
-//   audio.play();
-// }
-
-/*-------------------Código usando el teclado--------------------------------*/
-
-//variable button nunca es modificada por lo tanto se declara const
 const buttons = document.querySelectorAll('button');
 
 //arrow function
-buttons.forEach(
-  button => button.addEventListener('click',playSound);
+buttons.forEach(  button =>
+  button.addEventListener('click',playSound)
 );
 
 function playSound(event){
   const button = event.target;
   const note = button.dataset.note;
-}
-
-
-  button => button.onKeypress = playSound(event){
-    const btn = event.target;
-    const note = btn.dataset.note;
-  };
-
-
 
   //uso de template strings/literals
   const audio = document.getElementById(`audio${note}`);
@@ -95,3 +65,5 @@ function playSound(event){
   audio.currentTime =0;
   audio.play();
 }
+
+/*-------------------Código usando el teclado--------------------------------*/
