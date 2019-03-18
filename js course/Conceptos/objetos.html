@@ -14,6 +14,31 @@
       level: 17,
       energy: 100
     };
+    
+    //OBJETOS EJEMPLO
+var sacha ={
+  nombre: 'Sacha' ,
+  edad: 28 ,
+  apellido: 'Richards'
+}
+
+/*var dario ={
+  nombre: 'Dario',
+  edad:27 ,
+  apellido: 'Martinez'
+}*/
+
+/*function imprimirNombreYEdad({nombre, edad}){
+  var {nombre,edad }=sacha
+	console.log([nombre,edad, ])
+}*/
+
+function imprimirNombreYEdad(datos){
+  var {nombre,edad }=datos
+	console.log("Hola me llamo "+  (nombre) + " y tengo " + [edad] + " años")
+}
+
+imprimirNombreYEdad(sacha)
 
   </script>
 
