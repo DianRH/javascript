@@ -1,8 +1,7 @@
 <!--1. conseguir los recursos necesarios
 2. definir un diseño
 3. Escribir nuestro algoritmo
-4. hacer pruebas y corregirhasta finalizar nuestra app-->
-
+4. hacer pruebas y corregir hasta finalizar nuestra app-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,27 +14,19 @@
 </head>
 
 <body>
-  <!--button*7 atajo-->
+<!-- el atributo data se usa para guardar información personalizada privada que no se
+    va a visualizar data-string = "somevalue" -->
 
+<!-------------------Código para una tecla---------------------------------->
+  <button id="btnDO" data-note="DO" >DO</button>
 
-
-  <button id="btnDO" data-note="DO" >DO</button> <!--Una forma es atributo data consiste en escribir data-yNombreCualquiera
-para no asociarlo al texto del btn-->
-
-    <button  class="soneto"></button>
-  <button data-note="RE" class="btn">RE</button>
-    <button  class="soneto"></button>
-  <button data-note="MI">MI</button>
-  <button data-note="FA">FA</button>
-    <button class="soneto"></button>
-  <button data-note="SOL">SOL</button>
-    <button  class="soneto"></button>
-  <button data-note="LA">LA</button>
-    <button class="soneto"></button>
-  <button data-note="SI">SI</button>
-  <button data-note="DO">DO</button>
-    <button  class="soneto"></button>
-
+<!-------------------Código para varias teclas------------------------------>
+  <button data-note="RE" data-key="a">RE</button>
+  <button data-note="MI" data-key="s">MI</button>
+  <button data-note="FA" data-key="d">FA</button>
+  <button data-note="SOL" data-key="j">SOL</button>
+  <button data-note="LA" data-key="k">LA</button>
+  <button data-note="SI" data-key="l">SI</button>
 
   <audio src="7-notas-musicales/DO.wav" id="audioDO"></audio>
   <audio src="7-notas-musicales/RE.wav" id="audioRE"></audio>
@@ -45,10 +36,8 @@ para no asociarlo al texto del btn-->
   <audio src="7-notas-musicales/LA.wav" id="audioLA"></audio>
   <audio src="7-notas-musicales/SI.wav" id="audioSI"></audio>
 
-
-
-
   <script src="app.js"></script>
 </body>
-
 </html>
+
+<!--button*7 atajo-->
