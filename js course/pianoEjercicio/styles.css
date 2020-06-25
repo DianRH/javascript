@@ -1,33 +1,19 @@
 body{
-  text-align:center; /*entra el texto verticalmente*/
-  line-height:100vh;/**unidad de medida relativa al tamaño total (Viewport Height)*/
+  /* centra el texto verticalmente */
+  text-align:center;
+  /* unidad de medida relativa al tamaño total (Viewport Height) */
+  line-height:100vh;
   margin: 0;
   background-color: black;
-
 }
 
 button{
   vertical-align:middle;
-  width: 120px;
-  height: 450px;
-  /* background-color:#6fc0ab; */
-   background-image: linear-gradient(#6fc0ab, #6cc, #c1e7e3); */
-  color: #007d75;
+  width: 90px;
+  height: 300px;
   font-weight: bold;
   font-size: 18px;
-  /* border-right: 3px #6fc0ab solid;
-  border-left: 2px solid #6cc;
-  border-bottom:4px #6fc0ab solid; */
-border: solid 2px #007d75;
 }
-
-.soneto{
-  height:330px;
-  width: 60px;
-  border: solid 2px #007d75;
-position: absolute;
-z-index: 7;
-margin: -30px;
-top: 135px;
-
+.buttonClick {
+    background-color: blue;
 }
