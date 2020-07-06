@@ -1,1 +1,1 @@
-learning javascript beginners in this repository I will do exercises with the concepts.
+The porpuse of this repository is learn javascript beginners concepts to advanced concepts so I will do exercises and some of them are created with the course that I'm following, articles or videos links will be inside the respective exercises. 
